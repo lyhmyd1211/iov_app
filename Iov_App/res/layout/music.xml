@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout    xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/AbsoluteLayout01" 
+      android:layout_width="fill_parent" 
+ android:layout_height="fill_parent" >
+ 
+ 
+<ListView 
+
+  android:id="@id/android:list" 
+  android:layout_width="fill_parent"  
+  android:layout_height="100dp" 
+  android:drawSelectorOnTop="false"/>
+<LinearLayout
+    
+       android:layout_width="match_parent"
+ android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true"
+    
+    >
+    
+
+<Button   android:id="@+id/last"  
+android:background="@drawable/last"
+android:layout_width="50dp" android:layout_height="wrap_content"></Button>
+
+<Button  android:id="@+id/stop" android:background="@drawable/stop"
+  android:layout_marginLeft="10dp"
+ android:layout_width="50dp" android:layout_height="wrap_content"></Button>
+ 
+<Button  android:id="@+id/start" 
+  android:background="@drawable/start"
+  android:layout_marginLeft="10dp"
+android:layout_width="50dp" android:layout_height="wrap_content"></Button>
+
+<Button  android:id="@+id/pause" android:layout_width="60dp"
+android:background="@drawable/pause"
+android:layout_marginLeft="10dp"
+ android:layout_height="wrap_content"></Button>
+ 
+<Button  android:id="@+id/next"  
+  android:background="@drawable/next"
+  android:layout_marginLeft="10dp"
+android:layout_width="50dp" android:layout_height="wrap_content"></Button>
+</LinearLayout>
+</RelativeLayout>

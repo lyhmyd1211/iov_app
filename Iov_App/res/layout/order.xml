@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+  <TextView
+         android:id="@+id/title"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="填写订单"
+         android:gravity="center"
+         android:textSize="30sp"
+         android:textColor="@android:color/black"
+         />
+    <LinearLayout
+        android:id="@+id/Layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/text_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/username"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/order_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.7"
+            android:textColor="@android:color/black"
+            />
+        
+
+       
+ 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Layout_name"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.9"
+           android:text="@string/time"
+           android:gravity="end"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/time_show"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:text=""
+            android:textColor="@android:color/black" />
+
+        <ImageButton
+            android:id="@+id/time_btn"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/abc_btn_switch_to_on_mtrl_00012" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout_gas_station"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Layout_time"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/gas_station"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/gas_station"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ed_gas_station"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.7"
+            android:textColor="@android:color/black"
+            
+             />
+       
+</LinearLayout>
+        <LinearLayout
+         android:id="@+id/Layout_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Layout_gas_station"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+         <TextView
+             android:id="@+id/address"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:gravity="end"
+             android:text="@string/address"
+             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ed_address"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="2.7"
+           android:textColor="@android:color/black"
+            />
+    </LinearLayout>
+ 
+       <LinearLayout
+         android:id="@+id/Layout_gas_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Layout_address"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+         <TextView
+             android:id="@+id/gas_type"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="@string/gas_type"
+             android:textSize="20sp"
+              />
+
+        <Spinner
+            android:id="@+id/ed_gas_type"
+            android:layout_width="0dp"
+            android:layout_weight="2.7"
+            android:layout_height="30dp"
+            />
+    </LinearLayout>
+ <LinearLayout
+         android:id="@+id/Layout_gas_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/Layout_gas_type"
+        android:orientation="horizontal" >
+
+         <TextView
+             android:id="@+id/gas_num"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1.1"
+             android:text="@string/gas_num"
+             android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ed_gas_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.7"
+            android:textColor="@android:color/black"
+            android:hint="0.0"
+            android:gravity="center"
+            />
+         <TextView
+            android:id="@+id/danwei3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+                 android:gravity="center"
+                 android:text="升"></TextView>
+    </LinearLayout>
+    
+  
+    <LinearLayout
+         android:id="@+id/Layout_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+          android:layout_below="@+id/Layout_gas_num"
+          android:orientation="horizontal" >
+
+         <TextView
+             android:id="@+id/total_price"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="@string/total_price"
+             android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ed_total_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:ems="10"
+            android:textSize="40sp"
+                 android:gravity="center"
+                 android:hint="0.0"
+            />
+         <TextView
+            android:id="@+id/danwei4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+                 android:gravity="center"
+                 android:text="RMB"
+                 />
+    </LinearLayout>
+ <LinearLayout
+        android:id="@+id/Layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btn_order_ok"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:text="@string/order_ok" />
+    <Button
+        android:id="@+id/btn_order_cancel"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:text="@string/order_cancel" />
+</LinearLayout>
+
+<ImageView 
+        android:id="@+id/showzxing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Layout_button"
+        />
+
+
+</RelativeLayout>

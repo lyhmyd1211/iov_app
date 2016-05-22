@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LovA</string>
+    <string name="action_settings">Settings</string>
+    <string name="username">用户名:</string>
+    <string name="password">密码:</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="again_password">确认密码:</string>
+    <string name="ensure">确定</string>
+    <string name="cancel">取消</string><string name="personal">个人中心</string><string name="order">预约加油</string><string name="check">违章查询</string><string name="binding">绑定车辆</string><string name="music">音乐中心</string>
+    <string name="real_name">姓名:</string>
+    <string name="cancel_login">注销</string>
+    <string name="scan">扫码绑定</string>
+    <string name="pick">扫描已有图片</string>
+    <string name="brand">品牌:</string>
+    <string name="logo">标志:</string>
+    <string name="model">型号:</string>
+    <string name="plate_num">车牌号码:</string>
+    <string name="engine_num">发动机号:</string>
+    <string name="level">车身级别:</string>
+    <string name="kilometers">已行里程:</string>
+    <string name="gasline">汽油量:</string>
+    <string name="engine_perform">发动机性能:</string>
+    <string name="transmission_perform">变速器性能:</string>
+    <string name="lighting">车灯性能:</string>
+    <string name="time">时间:</string>
+    <string name="gas_station">加油站:</string>
+    <string name="gas_type">加油类型:</string>
+    <string name="gas_num">加油数量:</string>
+    <string name="current_car">当前车辆:</string>
+    <string name="dialog_distance_title">请选择检索范围</string>
+    <string name="kilometre_3">3km</string>
+    <string name="kilometre_5">5km</string>
+    <string name="kilometre_8">8km</string>
+    <string name="kilometre_10">10km</string>
+    <string name="station_price">本站油价</string>
+    <string name="province_price">省控基准油价</string>
+    <string name="text_load">正在获取加油站信息…</string>
+    <string name="address">地址:</string>
+    <string name="total_price">总计</string>
+    <string name="order_ok">确认订单</string>
+    <string name="order_cancel">取消订单</string>
+
+</resources>

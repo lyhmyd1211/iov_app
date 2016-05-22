@@ -1,0 +1,377 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    tools:context=".DrawerActivity" >
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!-- The main content view  地图!!!!!!!!!!!!-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/iv_loc"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:src="@drawable/location" />
+
+        <ImageView
+            android:id="@+id/iv_drawer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="8dp"
+            android:src="@drawable/list" />
+
+        <LinearLayout
+            android:id="@+id/ll_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_toLeftOf="@id/iv_loc"
+            android:layout_toRightOf="@id/iv_drawer"
+            android:background="@drawable/frame"
+            android:visibility="gone"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/v_dotted_line"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/dark_grey" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_price_a"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tv_price_b"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+        <!-- The navigation drawer     用户菜单-->
+        
+ 
+
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="#fff" >
+
+    <TextView   android:id="@+id/music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/music"
+            android:textSize="20sp" />
+        
+
+    <LinearLayout
+        android:id="@+id/linearuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="@string/username"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/username_perform"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="" />
+        <Button
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="@android:color/white"
+        android:layout_weight="1"
+        android:text="@string/cancel_login" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearuser"
+        android:layout_marginTop="10dp" >
+
+        <Button
+            android:id="@+id/bind"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:text="@string/binding" />
+
+        <Button
+            android:id="@+id/check"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:text="@string/check" />
+    </LinearLayout>
+
+    
+<LinearLayout 
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_below="@+id/linearLayout1"
+
+    >
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:textSize="15sp"
+        android:text="@string/current_car" />
+
+   
+    <Spinner
+            android:id="@+id/current_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="2"
+          />
+</LinearLayout>
+<LinearLayout 
+      android:id="@+id/linearLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_below="@+id/linearLayout2"
+    >
+        <TextView
+        android:id="@+id/gasline"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="@string/gasline" />
+        <ProgressBar android:id="@+id/progress_horizontal"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50"
+        android:secondaryProgress="75" />
+
+        <TextView
+            android:id="@+id/gasline_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="0"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/per"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textSize="15sp" />
+</LinearLayout>
+<LinearLayout
+    android:baselineAligned="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/linearLayout3"
+    android:id="@+id/LinearLayout4"
+     android:layout_marginTop="10dp"
+     >
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+     android:layout_marginTop="10dp"
+     >
+         <TextView
+        android:id="@+id/kilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+       
+        android:text="@string/kilometers" />
+    <TextView
+        android:id="@+id/kilometers"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="0" />
+    <TextView
+        android:id="@+id/Km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="(Km)" />
+</LinearLayout>
+<LinearLayout
+    
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+     android:layout_marginTop="10dp"
+     >
+         <TextView
+        android:id="@+id/engine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+       
+        android:text="@string/engine_perform" />
+    <TextView
+        android:id="@+id/engine_per"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="好" />
+</LinearLayout>
+</LinearLayout>
+<LinearLayout
+    android:baselineAligned="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/LinearLayout4"
+    android:id="@+id/light"
+     android:layout_marginTop="10dp"
+     >
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+     android:layout_marginTop="10dp"
+     >
+         <TextView
+        android:id="@+id/trans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+       
+        android:text="@string/transmission_perform" />
+    <TextView
+        android:id="@+id/transmission"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="好" />
+</LinearLayout>
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+     android:layout_marginTop="10dp"
+     >
+         <TextView
+        android:id="@+id/lighting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+       
+        android:text="@string/lighting" />
+    <TextView
+        android:id="@+id/lighting_perform"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="好" />
+</LinearLayout>
+</LinearLayout>
+<LinearLayout
+    android:baselineAligned="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_below="@+id/light" 
+    android:orientation="vertical"
+     >
+ <TextView 
+      android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="订单列表"
+     android:gravity="center"
+     android:textColor="@android:color/black"
+     />
+<ListView
+    android:id="@+id/listorder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+</ListView>
+</LinearLayout>
+</RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.iov_app"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <application
+         android:name="com.example.iov_app.PetrolStationApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+         >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="eLo7R061VV1Z516CLc1TY8L5QhdHRHxb" />
+        <meta-data
+            android:name="com.thinkland.juheapi.openid"
+            android:value="JH24b9cce9c6ba5b4abc9a56eb156ceef3" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UserInfo">
+        </activity>
+        <activity
+            android:name=".Register"></activity>
+        <activity android:name=".Binding"></activity>
+         <activity android:name=".order"></activity>
+         <activity android:name=".orderinfo"></activity>
+         <activity android:name=".bindinginfo"></activity>
+         <activity android:name=".musicActivity"></activity>
+         <activity
+           
+            android:name="com.zxing.activity.CaptureActivity">
+          
+        </activity>
+         <activity android:name="com.deahu.activity.ShortNameList" >
+        </activity>
+          <activity
+            android:name="com.ericssonlabs.BarCodeTestActivity"></activity>
+          <activity android:name="com.deahu.activity.ProvinceList" >
+        </activity>
+        <activity android:name="com.deahu.activity.CityList" >
+        </activity>
+        <activity android:name="com.deahu.activity.WeizhangResult" >
+        </activity>
+        <service android:name="com.cheshouye.api.client.WeizhangIntentService" />
+         <activity
+            android:name="com.deahu.activity.MainActivity"></activity>
+         <service   android:name="com.example.iov_app.Car_Service"
+             ></service>
+         <receiver android:name="com.example.iov_app.AlarmReceiver"></receiver>
+              <activity
+            android:name="com.example.iov_app.StationInfoActivity"
+            android:screenOrientation="portrait" />
+      
+        <activity
+            android:name="com.example.iov_app.RouteActivity"
+            android:screenOrientation="portrait" />
+        <activity  android:name="com.jk.activity.KuGouActivity"/>
+           <service 
+            
+            android:name="com.jk.service.musicService">
+            <intent-filter >
+                 <action android:name="com.jk.service.musicservice"/>
+                
+            </intent-filter>
+               <service   android:name="com.example.iov_app.MusicService"
+             ></service>
+        </service>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+    </application>
+
+</manifest>
